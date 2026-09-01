@@ -1,7 +1,7 @@
 ---
 layout: assignment
-due: 2026-02-09 23:59:59
-github_url: https://classroom.github.com/a/UYwvvqk6
+due: 2026-09-08 23:59:59
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
@@ -37,4 +37,3 @@ We will demonstrate a framework for compiling C and assembly language source fil
 ## Rubric
 
 1. 100 points as shown by autograder running on a beagle riscv64 host
-
