@@ -1,7 +1,7 @@
 ---
 layout: assignment
-due: 2026-02-17 23:59:59 -0800
-github_url: https://classroom.github.com/a/k8wK81F4
+due: 2026-09-15 23:59:59 -0800
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
@@ -53,7 +53,7 @@ Given the address of an array of unsigned integers, and the length of the array,
 
 ## Given
 
-1. The starter repo contains C implementations for each of the programs
+1. **Use the `project02-template` repo when creating your repo**
 1. Autograder test cases are available
 
 ## Rubric
@@ -66,5 +66,5 @@ Given the address of an array of unsigned integers, and the length of the array,
     1. Code quality: consistent formatting, no dead or redundant code, no unnecessarily complex code, readable comments
 1. Interactive grading logistics
     1. You must show your code in a RISC-V environment (local guest or beagle), and in a terminal editor (not github.com or VS Code or other GUI tool)
-    1. Since we have large sections this semester, we will have 10 minute meetings. Please be on time
-    and ready to show your code. We don't have time to fix `ssh` or audio/video issues in Zoom.
+    1. Since we have small sections this semester, we will have 15 minute meetings. Please be on time
+    and ready to show your code. Please resolve any issues with `ssh` or your camera/microphone setup before the meeting.
