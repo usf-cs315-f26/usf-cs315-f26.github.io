@@ -1,7 +1,7 @@
 ---
 layout: assignment
-due: 2026-02-23 23:59:59 -0800
-github_url: https://classroom.github.com/a/QeuHM2Xd
+due: 2026-09-21 23:59:59 -0800
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
@@ -9,7 +9,7 @@ published: true
 
 1. You will develop RISC-V assembly language implementations of the following recursive problems. 
     1. Your solution must be recursive. No credit will be given for an iterative solution. 
-1. Your executable must be compiled with a `Makefile`
+1. Your executable must be compiled with a `Makefile` which builds an executable called `lab03`
 1. Before you add files to your repo, do a `$ make clean` so you don't add/commit build products like executables or .o files
 1. We will test the labs using autograder
 
@@ -53,7 +53,7 @@ published: true
 ## Given
 
 1. We will demonstrate a framework for compiling C and assembly language source files, and calling assembly language functions from C. 
-1. We provide C implementations of `fibrec_c()`, `sumarr_rec_c()`, `is_pal_rec_c()`.
+1. When you create your repo in our org, use `lab03-template` as a template repo. It contains C implementations of `fibrec_c()`, `sumarr_rec_c()`, `is_pal_rec_c()`.
 
 ## Rubric
 
