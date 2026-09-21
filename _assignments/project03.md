@@ -1,7 +1,7 @@
 ---
 layout: assignment
-due: 2026-03-02 23:59:59 -0800
-github_url: https://classroom.github.com/a/j6QTieP9
+due: 2026-09-28 23:59:59 -0800
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
@@ -10,7 +10,6 @@ published: true
 1. You will develop RISC-V assembly language implementations of the following problems, and print the results to ensure that both the C implementation and your RISC-V implementation compute the correct answer.
 1. Your executables must be named as follows. A `Makefile` is provided in the given repo.
 1. We will test your projects using autograder
-1. Automatically-generated code using a C compiler or generative AI (Chat GPT etc.) is not acceptable. You must develop the programs yourself.
 
 **pack_bytes**
 
@@ -84,16 +83,8 @@ Given an input number and base, use the given `str_to_int_c()` implementation to
 
 ## Given
 
-The starter repo contains C implementations for each of the programs
+The template repo `project03-template` contains C implementations for each of the programs
 
 ## Rubric
 
-1. 80 points: automated test cases. You may need to `git pull` in the tests repo.
-1. Option 1: Hand in LLM code. 5 points
-1. Option 2: Write it yourself. 20 points. Graded offline (no code review meeting) 
-    1. Consistent formatting
-    1. No dead or redundant code
-    1. No unnecessarily complex code
-    1. Readable comments
-    1. No build products in the repo
-    1. If you choose this option but hand in LLM code, your max score will be 70 points.
+100 points: automated test cases. You may need to `git pull` in the tests repo.
