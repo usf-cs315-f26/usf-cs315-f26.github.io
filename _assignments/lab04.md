@@ -1,12 +1,12 @@
 ---
 layout: assignment
-due: 2026-03-10 23:59:59 -0700
-github_url: https://classroom.github.com/a/EE8YcDCc
+due: 2026-10-05 23:59:59 -0700
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
 Requirements
-1. You will use the given code, lecture material, and RISC-V reference manual to develop a C program which can read RISC-V machine code and emulate what the instructions would do on a real processor.
+1. You will use the template repo `lab04-template`, lecture material, and RISC-V reference manual to develop a C program which can read RISC-V machine code and emulate what the instructions would do on a real processor.
 1. For reference see the [RISC-V ISA Specification Volume 1](https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMAFDQC/riscv-spec-20191213.pdf)
     1. Chapter 2 RV32I Base Integer Instruction  Set (pages 13-24)
     1. Chapter 5 RV64I Base Integer Instruction Set (pages 35-40) 
@@ -41,5 +41,4 @@ Requirements
     Emu: 6
 
 ## Rubric
-1. Your lab will receive the score indicated by the autograder
-1. To get the test cases, git pull in the tests repo
+100 points: automated test cases. You may need to `git pull` in the tests repo.
