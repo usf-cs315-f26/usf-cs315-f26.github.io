@@ -1,7 +1,7 @@
 ---
 layout: assignment
 due: 2026-03-24 23:59:59 -0700
-github_url: https://classroom.github.com/a/_gaeGcOR
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
@@ -25,6 +25,7 @@ published: true
     1. A 4-way set associative cache with a block size of 4 words and LRU slot replacement
 
 ## Given
+1. You will use the template repo `project04-template`
 1. In lecture and lab, we will: 
     1. illustrate how to decode machine code and execute the operations specified
     1. illustrate a direct-mapped cache and describe the data structures and algorithms required for a set-associative cache
@@ -35,11 +36,11 @@ published: true
 ## Grading Rubric
 **Automated testing**
 
-70 pts: Automated tests
+50 pts: Automated tests
 
 **Code Review**
 
-1. Option 1: Use an LLM, 10/30 points for code review, up to 80/100 for the project
-1. Option 2: Write original code, up to 30/30 pts for code review, up to 100/100 for the project. 
-  2. Clean repo, consistent naming and indentation, no dead code, no unnecessarily complex code
-  3. Code walkthrough including your implementation of emulation, dynamic analysis, and the instruction cache.
+1. 5 pts: Coding style - clean repo, consistent naming and indentation, no dead code, no unnecessarily complex code
+1. 7 pts: Code review - emulation
+1. 8 pts: Code review - dynamic analysis
+1. 30 pts: Code review - caching. 30 pts for great explanation, 20 pts for good explanation, 10 pts for weak explanation.
