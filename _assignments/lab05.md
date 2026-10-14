@@ -1,16 +1,22 @@
 ---
 layout: assignment
 due: 2026-03-31 23:59:59 -0700
-github_url: https://classroom.github.com/a/lU2uABVe
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
 {% assign img_base = site.url | append: site.baseurl | append: "/assets/img" %}
 
 ## Background
-We are now learning the basics of digital logic and digital circuits with the goal of learning enough to build a working computer processor. We will use the Digital application to build and simulate digital circuits:
-[https://github.com/hneemann/Digital](https://github.com/hneemann/Digital). 
-For this lab your are going to build and simulate some simple circuits.
+We are now learning the basics of digital logic and digital circuits with the goal of learning enough to build a working computer processor. We will use the [Golden Gates](https://github.com/usfca-cs-tools/golden-gates) application to build and simulate digital circuits. For this lab your are going to build and simulate some simple circuits.
+
+## Environment setup
+1. We will use the `uv` package manager to install autograder and GGL on your laptop (not on beagle). Use the [uv install instructions](https://docs.astral.sh/uv/getting-started/installation/) to install on your laptop OS. If you're using Windows, I suggest working in WSL.
+2. Install autograder using `uv tool install git+https://github.com/phpeterson-usf/autograder`
+3. Install GGL using `uv tool install git+https://github.com/usfca-cs-tools/ggl`
+4. Clone this semester's test cases `git clone git@github.com:usf-cs315-f26/tests.git`. You may want to clone test cases in `~/cs315/` or `~/Desktop/cs315/`
+5. Type `grade` to get autograder to create `~/.config/grade/config.toml`
+6. Edit config.toml to comment `tests_path` in and give it the path where you cloned the tests repo
 
 ## Part 1: LEDs
 1. You will build a circuit in with two inputs and 4 LED output that shows how 4 basics gates work: NOT, AND, OR, and XOR. 
