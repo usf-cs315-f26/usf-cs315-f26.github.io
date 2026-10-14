@@ -39,19 +39,19 @@ Consider the C code fragment below:
 1. Your inputs will be `a1`, `a0`, `b1`, `b0` and your outputs will be `r1` and `r0`. So, you will have two Boolean equations, one for `r1` and one for `r0`.  
 1. Since there are 4 inputs you will have 2^4 (16) rows in your truth table. 
 1. Submit a working circuit that correctly produces the max value of the two inputs. You do not need to submit the truth table or Boolean algebra equation.
-1. Your circuit must have input names `a1`, `a0`, `b1`, and `b0`. The file must be called `max2.dig`
+1. Your circuit must have input names `a1`, `a0`, `b1`, and `b0`. The file must be called `max2.ggc`
 
 ## Part 3: 1-bit full adder
 1. In lecture, we built a 1-bit half adder (that is, an adder which does not have a carry-in) and showed the Boolean Algebra equation for a 1-bit full adder. 
 1. You will build a 1-bit full adder in Digital, including a carry-in (`cin`) and a carry-out (`cout`).
-Your circuit must have inputs named `a`, `b`, and `cin`, and outputs named `sum` and `cout`. Your file must be named `1-bit-full-adder.dig`
+Your circuit must have inputs named `a`, `b`, and `cin`, and outputs named `sum` and `cout`. Your file must be named `1-bit-full-adder.ggc`
 1. Here are the truth table and sum-of-products equations for `sum` and `cout` 
 
 ![lab05-part3]({{ img_base }}/lab05-part3.png)
 
 ## Part 4: 8-bit Ripple Carry Adder
 1. You will implement an 8-bit Ripple Carry Adder with two 8-bit inputs, a 1-bit Carry In, one 8-bit result output, and a 1-bit Carry Out.
-1. Your circuit must have inputs named `a`, `b`, and `cin`, and outputs named `sum` and `cout`. Your file must be called `8-bit-ripple-carry-adder.dig`
+1. Your circuit must have inputs named `a`, `b`, and `cin`, and outputs named `sum` and `cout`. Your file must be called `8-bit-ripple-carry-adder.ggc`
 
 ## Rubric
 1. 33 pts: max2
