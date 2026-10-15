@@ -1,6 +1,6 @@
 ---
 layout: assignment
-due: 2026-03-31 23:59:59 -0700
+due: 2026-10-26 23:59:59 -0700
 github_url: https://github.com/usf-cs315-f26
 published: true
 ---
