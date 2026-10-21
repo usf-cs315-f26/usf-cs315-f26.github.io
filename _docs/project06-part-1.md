@@ -4,7 +4,7 @@ layout: default
 
 {% assign img_base = site.url | append: site.baseurl | append: "/assets/img/project06GG" %}
 
-The project spec for project06 provides high-level requirements. This guide, along with lecture material, will drill down into the details. Using all of this information, you will implement and simulate a single-cycle RISC-V processor in Digital
+The project spec for project06 provides high-level requirements. This guide, along with lecture material, will drill down into the details. Using all of this information, you will implement and simulate a single-cycle RISC-V processor in Golden Gates
 
 ## Major Components
 
@@ -16,18 +16,18 @@ The project spec for project06 provides high-level requirements. This guide, alo
 1. The Register File supports reading and writing from RISC-V registers. We will expose the register values as outputs, so they may be used as inputs to other circuits
 1. The Arithmetic Logic Unit (ALU) supports addition, subtraction, multiplication, logical shift left, and logical shift right.  We will also use the ALU to computer branch target addresses and memory target addresses.
 1. The Extender supports sign-extension of immediate values. 
-1. Data Memory is a Digital RAM component which supports our simulated stack, storing function parameters and preserved register values, as needed.
+1. Data Memory is a Golden Gates RAM component which supports our simulated stack, storing function parameters and preserved register values, as needed.
 
 ## PC
-1. We will represent PC using a Digital Register component, in the top level of our processor
-1. Digital does not provide a CLR input to its registers, but we can add one as our project grows
+1. We will represent PC using a Golden Gates Register component, in the top level of our processor
+1. Golden Gates does not provide a CLR input to its registers, but we can add one as our project grows
 1. EN will always be 1 so we can move the PC forward 4 bytes on each CLK cycle
 1. As in Project04, you will update the PC with a calculated address for JAL and JALR instructions
 1. The D output will address the Instruction Memory to retrieve the instruction word at the PC address
 
 ## Instruction Memory
 
-1. Instruction memory will be built out of Digital ROM components, starting with one and expanding to more for each simulated function
+1. Instruction memory will be built out of Golden Gates ROM components, starting with one and expanding to more for each simulated function
 1. Each RISC-V machine code instruction is 32 bits, so the ROM will have 32 data bits
 1. The number of address bits will vary based on the size of your simulated programs. Recall that with 8 address bits, you can address 2^8 = 256 instructions
 1. Similar to Project05, note that the ROM is addressed by 32-bit words, but the PC represents a byte address. You can obtain the word address using a splitter

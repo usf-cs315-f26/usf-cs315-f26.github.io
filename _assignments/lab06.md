@@ -1,14 +1,14 @@
 ---
 layout: assignment
-due: 2026-04-14 23:59:59 -0700
-github_url: https://classroom.github.com/a/GAc-Pf2j
+due: 2026-11-09 23:59:59 -0700
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
 ## Requirements
 For this lab you should implement all the components and the top-level partial processor circuit described in the [Project 06 Guide Part 1](/docs/project06-part-1.html) with the following exceptions: the Extender and Data Memory for this lab.
 In summary you need to implement:
-1. A Program Counter using  a 64-bit Register with CLR. You may use your own register, or the Digital Register component
+1. A Program Counter using  a 64-bit Register with CLR. You may use your own register, or the Golden Gates Register component
 1. A Register File that has 32 registers. Two registers can be read, and one can be written, in a single clock cycle.
 1. An ALU that supports `addi`, `sub`, `mul`, `sll`, and `srl`.
 1. Your top-level processor should have a variation of the dashboard view using splitters, tunnels, and probes as shown in the guide. You do not have the replicate this view identically, but it should show the same information. You are free to come up with new and better ways to display the same information.
@@ -26,11 +26,11 @@ In summary you need to implement:
         `sub t0, t0, t1` resulting in `T0` = 0
 1. Your ALU should be able to subtract A - B and calculate the correct result
 1. For the autograder to test the four cases above:
-    1. Your main circuit must be named `lab06.dig`, have inputs named `CLK`, `CLR`, `RR0`, `RR1`, `WR`, `WE`, `ALUSrcB`, `ALUOp`, and `Imm`, and outputs named `T0` and `T1`
-    1. Your `ALU` must be named `alu.dig`, have inputs named `A`, `B`, and `ALUOp`, and an output named `R`
+    1. Your main circuit must be named `lab06.ggc`, have inputs named `CLK`, `CLR`, `RR0`, `RR1`, `WR`, `WE`, `ALUSrcB`, `ALUOp`, and `Imm`, and outputs named `T0` and `T1`
+    1. Your `ALU` must be named `alu.ggc`, have inputs named `A`, `B`, and `ALUOp`, and an output named `R`
 
 ## Given
-You may use any of Digital's built-in components, or your own if you prefer.
+You may use any of Golden Gates's built-in components, or your own if you prefer.
 
 ## Rubric
 100 points as shown by the autograder

@@ -1,14 +1,14 @@
 ---
 layout: assignment
-due: 2026-05-13 23:59:59
-github_url: https://classroom.github.com/a/63aAwW6k
+due: 2026-12-08 23:59:59
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
 ## Due
 1. For this project, you will start with a given, basic implementation of a pipelined processor. This is a 5-stage pipeline processor that includes pipeline registers between each stage. To execute code on this processor, code must contain `nop` (no operation) instructions (`addi x0, x0, 0`) between real instructions so that the register file is updated properly. We will learn how this processor works in class this week.
 1. You will evolve the given implementation to include a Hazard Unit and data path additions which provides support for Register Forwarding for data dependencies, Stalling for memory reads, and Flushing the pipeline to handle branches. The ultimate goal is to remove the need for nop instructions to properly execute code and to allow the pipeline to run at the fastest rate possible.
-1. You will commit the entire implementation of your pipelined processor, including the given circuits and ROMs, to your assignment repo. Your top-level processor must be named project07.dig.
+1. You will commit the entire implementation of your pipelined processor, including the given circuits and ROMs, to your assignment repo. Your top-level processor must be named project07.ggc.
 
 ## Requirements
 1. For this project you will evolve the given processor design to include a Hazard Unit and necessary data path additions. The Hazard Unit gives the processor the ability to automatically handle the hazard conditions described in the following test cases.
@@ -55,7 +55,7 @@ This program illustrates a Control Hazard. Since the `jal` instruction means tha
     1. Instruction memory, including assembly source and hex files, for:
         1. Four programs which execute using nop instructions to manually avoid hazards
         1. The three programs which require your Hazard Unit to execute correctly
-1. You may use any of Digital's built-in components, or your own if you prefer.
+1. You may use any of Golden Gates's built-in components, or your own if you prefer.
 
 ## Rubric
 - 10 pts: passes `00-add-3nop`, `01-add-2nop`, `02-jal`, `03-lw` test cases

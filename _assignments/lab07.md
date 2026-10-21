@@ -1,13 +1,13 @@
 ---
 layout: assignment
-due: 2026-04-21 23:59:59
-github_url: https://classroom.github.com/a/hLUlr4Cu
+due: 2026-11-16 23:59:59
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
 ## Requirements
 
-1. For this lab, please use an incremental development approach and commit two top-level circuits: `lab07-part1.dig` and `lab07-part2.dig`. 
+1. For this lab, please use an incremental development approach and commit two top-level circuits: `lab07-part1.ggc` and `lab07-part2.ggc`. 
 1. Each top-level circuit should contain its own decoder circuit to identify instructions and propagate the appropriate control signals. 
 1. For this lab you will combine your work from lab06 with a new implementation of the control lines as described in the [Project 06 Guide Part 2](/docs/project06-part-2.html)
 1. Use the spreadsheet approach to develop a decoder table that associated inputs (opcode, funct3, funct7, and funct6) with decoder outputs (`RFW`, `ALUOp`, etc.).
@@ -40,7 +40,7 @@ published: true
 ## Given
 
 1. You may use any of the circuits shown in the [Project 06 Guide Part 2]({{ site.url }}/docs/project06-part-2.html)
-1. You may use any of Digital's built-in components, or your own if you prefer.
+1. You may use any of Golden Gates's built-in components, or your own if you prefer.
 
 ## Rubric
 

@@ -1,20 +1,20 @@
 ---
 layout: assignment
-due: 2026-04-28 23:59:59 -0700
-github_url: https://classroom.github.com/a/Gg6XEegB
+due: 2026-11-24 23:59:59 -0700
+github_url: https://github.com/usf-cs315-f26
 published: true
 ---
 
 ## Due 
 
-1. Submit all of the .dig files and .hex files required to run your processor implementation
+1. Submit all of the .ggc files and .hex files required to run your processor implementation
 1. Submit a PDF for your Decoder spreadsheet
 
 ## Requirements
 
-1. You will implement a single-cycle microarchitecture for a subset of the RISC-V instruction set architecture in Digital
-    1. You may use any of Digital's library of components
-    1. We will introduce some new and useful tools and techniques for Digital in lecture
+1. You will implement a single-cycle microarchitecture for a subset of the RISC-V instruction set architecture in Golden Gates
+    1. You may use any of Golden Gates's library of components
+    1. We will introduce some new and useful tools and techniques for Golden Gates in lecture
 1. You need to pass unit tests and complete program tests provided below. Note that the complete program requirements are the same as for Project04. The unit tests will help you incrementally build and test your processor. We will provide a starter instruction memory with the unit tests and the complete program tests from Project04.
 1. In order to make the given functions for testing runnable on your processor the given files contain these changes:
     1. A `main` function at the top of the file (offset 0)
@@ -26,7 +26,7 @@ published: true
     1. A Register File that can support reading 2 registers in a single clock cycle: `RD0`, `RD1`
     1. The Arithmetic Logic Unit (ALU) will perform data processing tasks such as `add`, `sub`, `mul`, and shifting (`sll`, `slr`, `sra`). You will need to support more than these operations.
     1. The Branch Control Unit (BCU) will perform conditional branch computation and PC updates. You will need to decide where to put this logic in the top-level circuit.
-    1. Data Memory. We will use a Digital RAM component for data memory. This will be used for stack memory by our test programs. We will configure the RAM component to hold 64 bit word values. This will make it easy to support `ld` and `sd`. You will need to add logic for word- and byte-size memory operations.
+    1. Data Memory. We will use a Golden Gates RAM component for data memory. This will be used for stack memory by our test programs. We will configure the RAM component to hold 64 bit word values. This will make it easy to support `ld` and `sd`. You will need to add logic for word- and byte-size memory operations.
     1. The Control Unit will decode machine code instructions and generate control signals.
     1. The Data Path will connect data between the various sub-circuits
     1. The Control Path will connect the Control unit to various sub-circuits and multiplexers
