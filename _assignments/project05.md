@@ -35,9 +35,9 @@ published: true
     $ objdump -d file.o | python3 makerom3.py > file_rom.hex
     ```
 1. Remember to commit your .hex files in your repo
-1. Please load your .hex files into ROM using the File | Load UI, not the Auto Reload at Model Start UI.
 
 ## Given
+1. The template repo `project05-template` contains the assembly programs and a script to generate `.hex` files
 1. Circuits built in lecture
 1. Screen shot of top-level circuit
 
