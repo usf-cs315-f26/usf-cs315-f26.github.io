@@ -16,7 +16,7 @@ In summary you need to implement:
 1. By manipulating the inputs to the Register File, ALU, `CLK`, and `CLR`, your circuit should be able to execute four small programs:
     1. `addi t0, t0, 1` resulting in `T0` = 1 
     1. `li t1, 2 `resulting in `T1` = 2
-    1. `addi t0, t0, -1` resulting in `T0` = -1 (0xFFFFFFFF)
+    1. `addi t0, t0, -1` resulting in `T0` = -1 (0xFFFFFFFFFFFFFFFF)
     1. this multi-instruction program
 
         `li t0, 1` resulting in `T0` = 1
