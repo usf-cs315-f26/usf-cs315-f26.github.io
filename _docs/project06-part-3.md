@@ -11,7 +11,7 @@ This last guide will give an overview of the last two big components that need t
 Unlike JAL and JALR, the conditional branch instructions BEQ, BNE, BLT, and BGE will either update the PC to PC + 4 or the branch target address (BTA). JAL and JALR always update the PC to the BTA. The conditional branches need to determine if the branch will be taken by comparing the two register values designated by RS1 (RD0) and RS2 (RD1). So, we need to do three things:
 
 1. Compute BTA. BTA = PC + imm-b, where imm-b is the 64 bit signed extended immediate from the b-type instruction format. This will come from your ImmDecoder.
-1. Detemine if the branch will be taken using a comparison. Use can use the Digital comparator for each of the 4 types of comparison.
+1. Detemine if the branch will be taken using a comparison. You can use the Golden Gates comparator for each of the 4 types of comparison.
 1. Update the PC based on the result of the comparison.
 
 First you need to figure out where you should compute the BTA and where you should do the comparson. You could do either in the ALU, but not both. Since we already use the ALU to compute the BTA for JAL and JALR it makes sense to use the ALU for the conditional branch BTA computation. This means you need to put the comparisons in a separate unit, called the Branch Unit (BU).
@@ -23,7 +23,7 @@ Option 2: Replace PCsel with a new name, PCbr. This will be an output from the B
 
 ## Data Memory
 
-We need a way to allow our programs to store and load data, for our programs this will be on the stack, but we could also have a heap if we wanted. We need to support ld/sd, lw/sw and lb/sb. We can use the Digital RAM component (RAM Separated Ports). You can pick the data size with the data bits and the number elements with the address bits. We can support ld/sd easily by using 64 data bits. This will allow you to read (ld) a 64 bit value at the given double word (DW) address on the A (ADDR) input and write (str) a 64 bit value at the address A. Some things to note:
+We need a way to allow our programs to store and load data, for our programs this will be on the stack, but we could also have a heap if we wanted. We need to support ld/sd, lw/sw and lb/sb. We can use the Golden Gates RAM component. You can pick the data size with the data bits and the number elements with the address bits. We can support ld/sd easily by using 64 data bits. This will allow you to read (ld) a 64 bit value at the given double word (DW) address on the A (ADDR) input and write (str) a 64 bit value at the address A. Some things to note:
 - The A (ADDR) input will be a DW address. However, the target address calculated by the ALU will be a byte address (all addresses are represented at byte addresses in registers). This means you need to convert the byte addr into a DW addr. You can do this byte dividing the byte addr by 8 or right shifting by 3. You can do the shift and match the addr bits of the RAM with a splitter.
 - For loads, you will need to route the D output of the RAM back to the register file. You can either expand the WDsel MUX or you can introduce a new two input MUX that selects between the ALU Result and RAM based on a new control line (M2R). The output of the M2R MUX can go into the second input of the WDsel MUX.
 - You will need control lines form the InstDecoder: LD, ST, MZS (more below), and M2R or expanded WDsel bits.
@@ -49,6 +49,6 @@ Here is a proposed register dashboard that uses outputs and maps the register nu
 
 Here are few tips for development and debugging.
 1. Develop your circuit and instruction decoder incrementally. Do not try to construct and giant decoder spreadsheet first. This will make it harder to track down problems you may introduce.
-1. Paste the .dig tests into to your processor circuit so you can run test directly in Digital and see why a test is failing.
+1. Paste the .dig tests into to your processor circuit so you can run test directly in Golden Gates and see why a test is failing.
 1. Even with (2) you will eventually have to single step a test in order to find out what is going wrong. I suggest doing an objdump of the test code so you can see both the hex instruction words and the assembly language. You can check each instruction one by one to find out which instruction is not executing properly.
 1. To help with (3) you can add more probes to your processor circuit to see all the intermediate values on the data path. In this way you should be able to see if the problem is a incorrect control line or incorrect value from a component like ImmDecoder or the ALU.
